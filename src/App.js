@@ -13,7 +13,7 @@ const list = [
 }, {
     title: 'Redux',
     url: 'https://redux.js.org/',
-    author: 'Mark Hatcher, Andrew Clark',
+    author: 'Mark A Hatcher, Andrew Clark',
     num_comments: 2,
     points: 5,
     objectID: 1,
@@ -21,21 +21,18 @@ const list = [
 
 
 
-
-
-
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      list: list,
+      internal_list: list,
     };
   }
 
   render() {
       return (
         <div className="App">
-        {this.state.list.map(item =>
+        {this.state.internal_list.map(item =>
           <div key={item.objectID}>
             <span>
               <a href={item.url}>{item.title}</a>
