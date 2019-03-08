@@ -4,11 +4,12 @@ import './App.css';
 
 class App extends Component {
   render() {
-    return (
-      <div className="App">
-        <h2>Welcome to the Road to React</h2>
-      </div>
-    );
+    var helloWorld = "Welcome to the world of React with a Variable"
+      return (
+        <div className="App">
+          <h2>{helloWorld}</h2>
+        </div>
+      );
   }
 }
 
