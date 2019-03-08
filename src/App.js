@@ -13,7 +13,7 @@ const list = [
 }, {
     title: 'Redux',
     url: 'https://redux.js.org/',
-    author: 'Dan Abramov, Andrew Clark',
+    author: 'Dan the man Abramov, Andrew Clark',
     num_comments: 2,
     points: 5,
     objectID: 1,
@@ -28,7 +28,7 @@ class App extends Component {
           {
             list.map(function(item) {
               return (
-                 <div>
+                 <div key={item.objectID}>
                    <span><a href={item.url}>{item.title}</a></span>
                    <span>{item.author}</span>
                    <span>{item.num_comments}</span>
