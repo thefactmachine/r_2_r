@@ -23,6 +23,9 @@ const list = [
 const isSearched = searchTerm => item =>
   item.title.toLowerCase().includes(searchTerm.toLowerCase());
 
+// ==================================================================
+// ==================================================================
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -50,17 +53,19 @@ class App extends Component {
     const { searchTerm, list } = this.state;
     return (
       <div className="App">
-        <Search value={searchTerm} onChange={this.onSearchChange} />
+        <Search value={searchTerm} onChange={this.onSearchChange} Search />
         <Table list={list} pattern={searchTerm} onDismiss={this.onDismiss} />
       </div>
     );
   }
 }
 
+// ==================================================================
+// ==================================================================
 
 class Search extends Component {
   render() {
-    const { value, onChange } = this.props;
+    const { value, onChange, children} = this.props;
     return (
       <form>
         <input type="text" value={value} onChange={onChange} />
@@ -69,6 +74,8 @@ class Search extends Component {
   }
 }
 
+// ==================================================================
+// ==================================================================
 
 
 class Table extends Component {
